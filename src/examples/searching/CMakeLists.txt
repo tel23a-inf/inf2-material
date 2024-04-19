@@ -1,0 +1,2 @@
+add_subdirectory(binarysearch)
+add_subdirectory(linearsearch)

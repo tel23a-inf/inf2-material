@@ -1,0 +1,3 @@
+add_subdirectory(bubblesort)
+add_subdirectory(insertionsort)
+add_subdirectory(selectionsort)

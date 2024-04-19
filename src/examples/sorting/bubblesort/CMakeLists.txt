@@ -1,0 +1,1 @@
+add_test_executable_for_current_dir()
