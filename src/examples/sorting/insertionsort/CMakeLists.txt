@@ -1,1 +1,5 @@
-add_test_executable_for_current_dir()
+add_sourcefile_target(
+    TARGET insertionsort_tests
+    ADDITIONAL_SOURCES insertionsort.cpp
+    LINK_TESTS
+)

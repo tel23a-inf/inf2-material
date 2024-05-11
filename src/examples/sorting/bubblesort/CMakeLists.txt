@@ -1,1 +1,5 @@
-add_test_executable_for_current_dir()
+add_sourcefile_target(
+    TARGET bubblesort_tests
+    ADDITIONAL_SOURCES bubblesort.cpp
+    LINK_TESTS
+)
