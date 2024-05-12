@@ -41,6 +41,7 @@ function (add_binary_targets)
         message(STATUS "Linking Catch2 with target ${BT_TARGET}")
         target_link_libraries(${BT_TARGET} PRIVATE Catch2::Catch2WithMain)
         catch_discover_tests(${BT_TARGET})
+        add_dependencies(build-tests ${BT_TARGET})
     endif()
 
     if (NOT BT_NO_RUN_TARGET)

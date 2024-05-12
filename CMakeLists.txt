@@ -19,6 +19,8 @@ include(CTest)
 include(Catch)
 enable_testing()
 
+add_custom_target(build-tests)
+
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
 set(CMAKE_CXX_STANDARD 20)
 
