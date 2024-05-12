@@ -17,6 +17,7 @@ FetchContent_MakeAvailable(Catch2)
 
 include(CTest)
 include(Catch)
+enable_testing()
 
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
