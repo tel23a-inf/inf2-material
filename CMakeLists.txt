@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.20)
 
 project("Informatik 2 - TEL23A")
 
@@ -19,7 +19,6 @@ include(CTest)
 include(Catch)
 enable_testing()
 
-set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
 set(CMAKE_CXX_STANDARD 20)
 
