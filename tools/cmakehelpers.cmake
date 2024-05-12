@@ -45,6 +45,10 @@ function (add_binary_targets)
 
     if (NOT BT_NO_RUN_TARGET)
         message(STATUS "Creating run target for ${BT_TARGET}")
-        add_custom_target(run_${BT_TARGET} COMMAND ${BT_TARGET} DEPENDS ${BT_TARGET})
+        add_custom_target(run_${BT_TARGET}
+            COMMENT "Running ${BT_TARGET} ...\n\n"
+            COMMAND ${BT_TARGET}
+            DEPENDS ${BT_TARGET}
+        )
     endif()
 endfunction()
