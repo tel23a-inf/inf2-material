@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project("Informatik 2 - TEL23A")
 
+include(tools/cmakehelpers.cmake)
+
 Include(FetchContent)
 
 FetchContent_Declare(
