@@ -1,3 +1,3 @@
-add_executable(insertionsort insertionsort.cpp)
-add_executable(selectionsort selectionsort.cpp)
-add_executable(bubblesort bubblesort.cpp)
+add_binary_targets( SOURCES insertionsort.cpp NO_TESTS )
+add_binary_targets( SOURCES selectionsort.cpp NO_TESTS )
+add_binary_targets( SOURCES bubblesort.cpp NO_TESTS )

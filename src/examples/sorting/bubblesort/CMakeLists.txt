@@ -1,5 +1,1 @@
-add_sourcefile_target(
-    TARGET bubblesort_tests
-    ADDITIONAL_SOURCES bubblesort.cpp
-    LINK_TESTS
-)
+add_binary_targets( SOURCES bubblesort_tests.cpp )

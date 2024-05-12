@@ -1,5 +1,1 @@
-add_sourcefile_target(
-    TARGET insertionsort_tests
-    ADDITIONAL_SOURCES insertionsort.cpp
-    LINK_TESTS
-)
+add_binary_targets( SOURCES insertionsort_tests.cpp )

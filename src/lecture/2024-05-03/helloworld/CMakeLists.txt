@@ -1,3 +1,3 @@
-add_executable(hello hello.cpp)
-add_executable(loops loops.cpp)
-add_executable(functions functions.cpp)
+add_binary_targets( SOURCES hello.cpp NO_TESTS )
+add_binary_targets( SOURCES loops.cpp NO_TESTS )
+add_binary_targets( SOURCES functions.cpp NO_TESTS )
