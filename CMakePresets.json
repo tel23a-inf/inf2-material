@@ -1,0 +1,30 @@
+{
+    "version": 5,
+    "configurePresets": [
+        {
+          "name": "default",
+          "binaryDir": "${fileDir}/build"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "all",
+            "configurePreset": "default",
+            "targets": ["all"]
+        },
+        {
+            "name": "tests",
+            "configurePreset": "default",
+            "targets": ["build-tests"]
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "all",
+            "configurePreset": "default",
+            "execution": {
+                "noTestsAction": "error"
+            }
+        }
+    ]
+}
