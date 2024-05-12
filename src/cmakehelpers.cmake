@@ -4,7 +4,7 @@
 # Additionally, you can specify additional source files to add to the target.
 # If LINK_TESTS is set to true, the target will be linked with Catch2 and will be discovered as a test.
 function (add_sourcefile_target)
-    set (options LINK_TESTS)
+    set (options LINK_TESTS NO_RUN_TARGET)
     set (oneValueArgs TARGET)
     set (multiValueArgs ADDITIONAL_SOURCES)
     cmake_parse_arguments(T "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN} )
@@ -13,5 +13,8 @@ function (add_sourcefile_target)
     if (T_LINK_TESTS)
         target_link_libraries(${T_TARGET} PRIVATE Catch2::Catch2WithMain)
         catch_discover_tests(${T_TARGET})
+    endif()
+    if (NOT T_NO_RUN_TARGET)
+        add_custom_target(run_${T_TARGET} COMMAND ${T_TARGET} DEPENDS ${T_TARGET})
     endif()
 endfunction()
