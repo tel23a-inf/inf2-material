@@ -19,7 +19,7 @@
 # - NO_RUN_TARGET: If set to true, no run target will be created.
 # 
 function (add_binary_targets)
-    set (options NO_TESTS NO_RUN_TARGET)
+    set (options TESTS NO_RUN_TARGET)
     set (oneValueArgs TARGET)
     set (multiValueArgs SOURCES)
     cmake_parse_arguments(BT "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN} )
@@ -37,7 +37,7 @@ function (add_binary_targets)
     message(STATUS "Creating binary target ${BT_TARGET} from sources ${BT_SOURCES}")
     add_executable(${BT_TARGET} ${BT_SOURCES})
 
-    if (NOT BT_NO_TESTS)
+    if (BT_TESTS)
         message(STATUS "Linking Catch2 with target ${BT_TARGET}")
         target_link_libraries(${BT_TARGET} PRIVATE Catch2::Catch2WithMain)
         catch_discover_tests(${BT_TARGET})
