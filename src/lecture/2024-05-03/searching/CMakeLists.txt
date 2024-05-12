@@ -1,1 +1,1 @@
-add_binary_targets( SOURCES search.cpp TESTS )
+add_binary_targets( SOURCES search.cpp )
