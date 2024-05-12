@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "configurePresets": [
         {
           "name": "default",
@@ -26,5 +26,23 @@
                 "noTestsAction": "error"
             }
         }
-    ]
+    ],
+    "workflowPresets": [
+        {
+            "name": "build_and_test",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "default"
+                },
+                {
+                    "type": "build",
+                    "name": "tests"
+                },
+                {
+                    "type": "test",
+                    "name": "all"
+                }
+            ]
+        }]
 }
