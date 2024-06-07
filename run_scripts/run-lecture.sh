@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TODAY=2024-05-10
+TODAY=2024-06-07
 
 LECTURE_BASEDIR=lecture
 SCRIPT_DIR=run_scripts
